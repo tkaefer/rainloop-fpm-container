@@ -10,7 +10,7 @@ services:
       links:
         - rainloop
   rainloop:
-      image: rainloop:test
+      image: quay.io/tkaefer/rainloop:v1.11.3
       volumes:
         - rainloop-code:/var/www/html
         - ./rainloop-data:/var/www/html/data
