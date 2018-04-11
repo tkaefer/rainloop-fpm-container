@@ -8,7 +8,7 @@ ENV APP_INDEX_ROOT_PATH="/var/www/html"
 ENV APP_VERSION_TYPE="community"
 ENV APP_INDEX_ROOT_FILE="__FILE__"
 
-RUN curl -L https://github.com/RainLoop/rainloop-webmail/releases/download/v1.11.3/rainloop-community-${APP_VERSION}.zip > rainloop.zip && \
+RUN curl -L https://github.com/RainLoop/rainloop-webmail/releases/download/v${APP_VERSION}/rainloop-community-${APP_VERSION}.zip > rainloop.zip && \
   unzip rainloop.zip && \
   chown -R www-data /var/www/html && \
   find ./rainloop -type d -exec chmod 755 {} \; && \
